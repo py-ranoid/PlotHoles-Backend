@@ -24,6 +24,17 @@ app.get('/all/potholes',function(req,res) {
             throw err;
         }
         else {
+            res.send(potholes);
+        }
+    });
+});
+
+app.get('/data',function(req,res) {
+    pothole.find({},function(err,potholes){
+        if (err) {
+            throw err;
+        }
+        else {
             var html = '<table class="table table-striped">';
             html += '<tr>';
             var flag = 0;
