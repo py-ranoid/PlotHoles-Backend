@@ -1,0 +1,25 @@
+{
+  "name": "plotholes",
+  "version": "1.0.0",
+  "description": "The REST API for database operations driven by the android app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rest",
+    "test",
+    "plotholes",
+    "api",
+    "mongo"
+  ],
+  "author": "Rishabh Singh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-body-cleaner": "^1.0.1",
+    "mongoose": "^5.4.5",
+    "nodemon": "^1.18.9"
+  }
+}
