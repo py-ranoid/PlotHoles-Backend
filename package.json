@@ -21,6 +21,7 @@
     "express": "^4.16.4",
     "express-body-cleaner": "^1.0.1",
     "mongoose": "^5.4.5",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "request": "^2.88.0"
   }
 }
