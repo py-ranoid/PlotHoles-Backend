@@ -113,7 +113,11 @@ $('.tbl-header').css({'padding-right':scrollWidth});
   <table cellpadding="0" cellspacing="0" border="0">
     <% for (var i = 0; i < data.length; i++) { %>
       <tr>
-          <td><%= <a href = "http://www.google.com/maps/place/"+(data[i].latitude)+","+(data[i].longitude)>(data[i].latitude)+","+(data[i].longitude) %><></td>
+          <td>
+            <%= <a href = "http://www.google.com/maps/place/"+data[i].latitude+","+data[i].longitude>
+              data[i].latitude+","+data[i].longitude %>
+            </a>
+          </td>
           <td><%= data[i].first_recorded %></td>
           <td><%= data[i].area %></td>
           <td><%= data[i].pincode %></td>
