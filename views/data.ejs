@@ -1,0 +1,14 @@
+<table>
+  <tr>
+     <th>Latitude</th><th>Longitude</th><th>Count</th>
+  </tr>
+
+  <% for (var i = 0; i < data.length; i++) { %>
+   <tr>
+     <td><%= data[i].latitude %></td>
+     <td><%= data[i].longitude %></td>
+     <td><%= data[i].count %></td>
+   </tr>    
+  <% } %>
+</table>
+

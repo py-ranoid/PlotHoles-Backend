@@ -8,6 +8,7 @@ var pothole        	=   require('./api/models/pothole-model');
 var port        	=   process.env.PORT || 8080;
 
 mongoose.connect(config.database, {useNewUrlParser:true});
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(bodyCleaner);
@@ -35,23 +36,9 @@ app.get('/data',function(req,res) {
             throw err;
         }
         else {
-            var html = '<table class="table table-striped">';
-            html += '<tr>';
-            var flag = 0;
-            $.each(potholes[0], function(index, value){
-                html += '<th>'+index+'</th>';
+            res.render('data.ejs', {
+                data : potholes
             });
-            html += '</tr>';
-            $.each(potholes, function(index, value){
-                html += '<tr>';
-                $.each(value, function(index2, value2){
-                    html += '<td>'+value2+'</td>';
-                });
-                html += '<tr>';
-            });
-            html += '</table>';
-
-            res.send(html);
         }
     });
 });
