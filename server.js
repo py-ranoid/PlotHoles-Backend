@@ -18,6 +18,17 @@ app.get('/',function(req,res) {
     });
 });
 
+app.get('/all/potholes',function(req,res) {
+    pothole.find({},function(err,potholes){
+        if (err) {
+            throw err;
+        }
+        else {
+            res.send(potholes);
+        }
+    });
+});
+
 app.post('/pothole/add', function(req,res){
     if (req.body.latitude == "" || req.body.latitude == null) {
         return res.status(400).send({
