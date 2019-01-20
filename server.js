@@ -24,7 +24,23 @@ app.get('/all/potholes',function(req,res) {
             throw err;
         }
         else {
-            res.send(potholes);
+            var html = '<table class="table table-striped">';
+            html += '<tr>';
+            var flag = 0;
+            $.each(potholes[0], function(index, value){
+                html += '<th>'+index+'</th>';
+            });
+            html += '</tr>';
+            $.each(potholes, function(index, value){
+                html += '<tr>';
+                $.each(value, function(index2, value2){
+                    html += '<td>'+value2+'</td>';
+                });
+                html += '<tr>';
+            });
+            html += '</table>';
+
+            res.send(html);
         }
     });
 });
