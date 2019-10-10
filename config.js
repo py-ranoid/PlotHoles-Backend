@@ -1,3 +1,3 @@
 module.exports = {
-    'database': 'mongodb://plothole:bvj17qKni6FWqLXtJzfKftwpLyQJ0Wf1pjlz66LPlzDAHgXerdvEsUHo3rCMiBFRJDCV56JYCjOLdHrxb6Dfgw%3D%3D@plothole.documents.azure.com:10255/plothole_locs?ssl=true'
+    'database': 'mongodb://root:root123@ds333238.mlab.com:33238/heroku_07w9jcmf'
 };
